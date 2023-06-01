@@ -7,9 +7,6 @@ const { authentication } = require("./middleware/authentication.middleware")
 const app = express()
 
 app.use(express.json())
-app.use("/",(req,res)=>{
-    res.send("Welcome to Food Delivery App")
-})
 app.use("/",userRouter)
 app.use(authentication)
 app.use("/",restaurantRouter)
